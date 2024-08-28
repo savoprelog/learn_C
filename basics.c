@@ -7,32 +7,38 @@
     
     
     
-    
-//4. Write a C program to print the following characters in reverse. 
-//reve4rse the inputted string
+//5 Write a C program to compute the perimeter and area of a rectangle with a height of 7 inches and width of 5 inches
+
+
+/*
+
+void perimeter_area(double height, double width){  //void ne vrne nic, nemres napraviti return nekaj
+    double perimeter;
+    double area;
+    perimeter=2*height+2*width;
+    area=width*height;
+    printf("area is: %f\n", area);
+    printf("\n");
+    printf("perimeter is: %f\n", perimeter);
+
+}
+*/
+//Write a C program to compute the perimeter and area of a circle with a given radiu
+void perimeter_area(double rad){  //void ne vrne nic, nemres napraviti return nekaj
+    double perimeter;
+    double area;
+    double pi=3.14;
+    perimeter=2*rad*pi;
+    area=pi*rad*rad;
+    printf("area is: %f\n", area);
+    printf("\n");
+    printf("perimeter is: %f\n", perimeter);
+
+}
+
 int main(){
-    char word[20];
-    char rev[20];
-
-
-
-    printf("Enter your word: ");
-    scanf("%s", word);
-
-    int ls = strlen(word);
-    int i;
-    
-
-    for (i=ls; i>=0; i--){
-        //strcat(rev, word[i]);đ
-        char temp[2] = {word[i], '\0'};
-        strcat(rev, temp);
-        
-    }
-
-    printf("%s\n", rev);
-    
-
+    perimeter_area(2);
+ 
     return 0;
 
     }
