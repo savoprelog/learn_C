@@ -56,6 +56,70 @@ void pmatrix(){
     }
 }
 
+void series(int n){
+    float suma=1;
+
+    int i=2;
+    while(i<=n){
+        suma=suma+1.00/i;
+        i++;
+    }
+    
+    printf("%.3f", suma);
+
+}
+
+void powers(int n, int k){
+    int arr[k], i;
+    
+    int j=0;
+    arr[0]=n;
+    for(i=1; i<k;i++){
+        arr[i]=n*arr[j];
+        j++;   
+    }
+    printf("%d ", arr[k-1]);
+
+   // for (i=0; i<7;i++){
+     //   printf("element %d: %d\n", i+1, arr[i]);
+//}
+}
+
+void alldiv(int n) {
+    int c = n;
+    int b = c;
+    int i = 0;
+    int k;
+    int count = 0;
+
+    // Count the number of divisors
+    while (n > 0) {
+        if (c % n == 0) {
+            count++;
+        }
+        n--;
+    }
+
+    // Create an array to store the divisors
+    int arr[count];
+
+    // Find and store the divisors
+    while (c > 0) {
+        if (b % c == 0) {
+            arr[i] = c;
+            i++;
+        }
+        c--;
+    }
+
+    // Print the divisors
+    int len = sizeof(arr) / sizeof(arr[0]);
+    for (k = 0; k < len; k++) {
+        printf("%d ", arr[k]);
+    }
+}
+
+
 
 void gpmatrix(){
     int rows, cols;
@@ -247,9 +311,13 @@ void div_rem(int a, int b, int c, int d){ //print all numbers from a to b, which
 }
 
 
+
+
 int main(){
-    gpmatrix();
+    powers(4, 1);
+     
     
+
 
 
 
