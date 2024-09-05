@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<stdlib.h>
+void kol();
+int main(){
+/* 
+    int *arr;
+    int size=200;
+
+    arr=(int *)malloc(size * sizeof(int)); //maloc accepts the amount of bytes=how many elements times the size of the data type , it returns a pointer which is going to point to our space - this is known as dynamically allocated array
+        if (arr == NULL) { //you have to use %arr to access the value(memory address) of arr - to access the value that memmory address hold - type %*p 
+        printf("Memory allocation failed!\n"); //heap can become full
+        return 1;
+    }
+
+    free(arr); //if you forget to do this it is called a memory leak
+
+
+*/
+
+    //while(1){
+  //      kol();
+    }
+
+
+    //return 0;
+//}
+
+void kol(){
+    int size = 200;
+    int *a = malloc(size);
+}
+
+to je program, či ščeš crashati svoj računalnik - morš vgasnote - ovače de useless

@@ -4,7 +4,22 @@
 #include <complex.h>
 #include <stdlib.h>
 
+int powers(int n, int k){
+    int arr[k], i;
+    
+    int j=0;
+    arr[0]=n;
+    for(i=1; i<k;i++){
+        arr[i]=n*arr[j];
+        j++;   
+    }
+    //printf("%d ", arr[k-1]);
+    return arr[k-1];
 
+   // for (i=0; i<7;i++){
+     //   printf("element %d: %d\n", i+1, arr[i]);
+//}
+}
 
 
 //find maximum number and its index
@@ -69,21 +84,16 @@ void series(int n){
 
 }
 
-void powers(int n, int k){
-    int arr[k], i;
-    
-    int j=0;
-    arr[0]=n;
-    for(i=1; i<k;i++){
-        arr[i]=n*arr[j];
-        j++;   
+int sum(int n){
+    int s=0, i;
+    for (i=1; i<=n; i++){
+        s+=powers(i, 4);
     }
-    printf("%d ", arr[k-1]);
-
-   // for (i=0; i<7;i++){
-     //   printf("element %d: %d\n", i+1, arr[i]);
-//}
+    return s;
 }
+
+
+
 
 void alldiv(int n) {
     int c = n;
@@ -118,6 +128,9 @@ void alldiv(int n) {
         printf("%d ", arr[k]);
     }
 }
+
+
+
 
 
 
@@ -275,6 +288,8 @@ void quadratic(double a, double b, double c){
 
 
 
+
+
 void squar_even(int b, int n){ //squares of even numbers from b to n
     int i=b;
     while (i<=n){
@@ -311,10 +326,23 @@ void div_rem(int a, int b, int c, int d){ //print all numbers from a to b, which
 }
 
 
+    float ser(int n){
+        float i, sum=0;
+        for(i=1; i<=n; i++){
+            sum+=1.0/i;
+        }
+
+        return sum;
+    }
+
+
+
+
 
 
 int main(){
-    powers(4, 1);
+    alldiv(34);
+    
      
     
 
